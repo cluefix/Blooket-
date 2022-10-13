@@ -1,0 +1,9 @@
+(() => {
+	function reactHandler() {
+		const app = document.querySelector('#app > div > div');
+		const children = Object.values(app);
+		const grandChildren = children[1].children[1]._owner;
+		return grandChildren.stateNode.setState({ creatingFolder: true })
+	};
+	reactHandler();
+})();
