@@ -1,0 +1,9 @@
+(() => {
+const reactHandler = () => {
+return Object.values(document.querySelector('#app > div > div'))[1].children[1]._owner;
+};
+const togglePlus = (state) => {
+reactHandler().stateNode.setState({ plus: state });
+};
+togglePlus(true);
+})();
